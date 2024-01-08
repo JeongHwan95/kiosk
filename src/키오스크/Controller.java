@@ -47,11 +47,8 @@ public class Controller {
 		
 		if(choiceNum==1) {
 			this.orderDB.addFoodIntoCart(choice, numOfFood);
-		}else if(choiceNum == 2) {
-			// 가만히 내둔다. 
-		}else {
-			System.out.println("잘못된 입력입니다.");
-			System.out.println();
+		}else{
+			System.out.println("메뉴판으로 돌아갑니다.");
 		}
 	}
 
@@ -62,7 +59,7 @@ public class Controller {
 			this.view.completeScreen();
 			this.orderDB.setCart(new LinkedHashMap<>());;
 		}
-		else if(choice == 2) {
+		else {
 			System.out.println("메뉴판으로 돌아갑니다.");
 		}
 		
