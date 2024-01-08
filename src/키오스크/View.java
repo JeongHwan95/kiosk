@@ -72,8 +72,8 @@ public class View {
 			Food food = keySet.get(i);
 			int numOfFood = cart.get(food);
 			
-			System.out.println(food.getName() + " | " + food.getPrice() + " | "
-					+ food.getDescription()+" | " + numOfFood + "개 ");
+			System.out.println(food.getName() + " | "+ numOfFood +"개 | "+ food.getPrice() + " | "
+					+ food.getDescription()+" | " );
 			
 			sum = sum + (numOfFood * food.getPrice());
 		}
@@ -177,6 +177,7 @@ public class View {
 		try {
 			Thread.currentThread().sleep(3000);
 		} catch (InterruptedException e) {
+			
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
