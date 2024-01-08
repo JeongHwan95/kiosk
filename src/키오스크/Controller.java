@@ -33,7 +33,11 @@ public class Controller {
 			break;
 		case 5:
 			this.view.showCancelView();
-			
+			break;
+		default:
+			System.out.println("잘못된 입력입니다.");
+			System.out.println();
+			break;
 
 		} // switch
 	}
@@ -45,6 +49,9 @@ public class Controller {
 			this.orderDB.addFoodIntoCart(choice, numOfFood);
 		}else if(choiceNum == 2) {
 			// 가만히 내둔다. 
+		}else {
+			System.out.println("잘못된 입력입니다.");
+			System.out.println();
 		}
 	}
 
@@ -55,8 +62,8 @@ public class Controller {
 			this.view.completeScreen();
 			this.orderDB.setCart(new LinkedHashMap<>());;
 		}
-		else {
-			
+		else if(choice == 2) {
+			System.out.println("메뉴판으로 돌아갑니다.");
 		}
 		
 	}
@@ -66,6 +73,8 @@ public class Controller {
 		if(answer==1) {
 			this.orderDB.removeAll();
 			view.confirmCancelOrder();
+		}else {
+			System.out.println("메뉴판으로 돌아갑니다.");
 		}
 		
 	}
